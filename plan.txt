@@ -1,0 +1,20 @@
+realtime tracking food delivey app :
+
+(for front end)public
+(for backend)app---->http---->for all requests
+
+
+Steps:
+1.create layout(folders and files)(directory structure)
+2.install all dependencies:(npm)
+express,ejs,express-ejs-layouts
+
+install dev dependency----
+nodemon
+
+3.create express server---create server.js file
+  "server":"node server.js",
+    "dev":"nodemon server.js" 
+    add these scripts
+Features:
+
