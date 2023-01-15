@@ -1,0 +1,126 @@
+@import './variables';
+// no need of extension and _bcz wo smjh jaaega partial file hai!!!!!!!!!!!!!!
+
+body{
+    font-family: 'Lato',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color:dark;
+}
+
+nav li a{
+    &:hover{
+        transition: $smooth;
+        color: $primary;
+    //    yr apply nhi ho rha?????????????????? 
+    }
+   
+}
+#brand{
+    color:$primary;
+    /* font-size: 2.5rem; */
+      font-weight: bold;
+  }
+  
+  #header {
+    height: 80vh;
+    background-image: url("/img/header.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: brightness(80%);
+    color: white;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .header-inside{
+    margin:auto;
+    position: absolute;
+   
+      padding:10px;
+      margin:10px;
+    top:25%;
+  
+    /* margin:auto; this is also working and top:50 also */
+  }
+  
+  
+  .order-now{
+  
+  background-color:$primary ;
+  border:2px solid $primary;
+  &:hover{
+    transition: $smooth;
+    background-color: $primary-hover;
+    color: $dark;
+    border:2px solid $primary-hover;  
+  }
+  }
+  
+  
+  .item {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .add-to-cart{
+    border:2px solid $primary;
+    color:$primary;
+    background-color: $pure;
+    transition: $smooth;
+    &:hover{
+        background-color: $primary;
+        color:$pure;
+        border-color: $pure;
+    }
+  }
+
+//   empty cart
+
+section.cart{
+    background-color: $secondary;
+    min-height: calc(100vh - 66px);
+}
+.empty-cart{
+    background-color: white;
+     
+ }  
+ .amount{
+    color: $primary;
+ }
+ section.login{
+    background-color: $secondary;
+    min-height: calc(100vh - 66px);
+    a{
+        color: $primary;
+        &:hover{
+            color: $primary-hover   ;
+        }
+    }
+ }
+ 
+// login
+.login-form{
+    
+    box-shadow: 10px 5px 5px rgb(153, 151, 151);
+    width:22vw;
+    background-color: $pure;
+}
+.register-form{
+    box-shadow: 10px 5px 5px rgb(153, 151, 151);
+    width:25vw;
+    background-color: $pure;
+}
+.reserve{
+    color:gray;
+
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: dark;
+}
+
+nav li a:hover {
+  transition: all 0.3s ease-in-out;
+  color: #FE5F1E;
+}
+
+#brand {
+  color: #FE5F1E;
+  /* font-size: 2.5rem; */
+  font-weight: bold;
+}
+
+#header {
+  height: 80vh;
+  background-image: url("/img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(80%);
+  color: white;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.header-inside {
+  margin: auto;
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  top: 25%;
+  /* margin:auto; this is also working and top:50 also */
+}
+
+.order-now {
+  background-color: #FE5F1E;
+  border: 2px solid #FE5F1E;
+}
+.order-now:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #b23301;
+  color: #232323;
+  border: 2px solid #b23301;
+}
+
+.item {
+  height: 50px;
+  width: 50px;
+}
+
+.add-to-cart {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background-color: #FE5F1E;
+  color: #fff;
+  border-color: #fff;
+}
+
+section.cart {
+  background-color: #F8F8F8;
+  min-height: calc(100vh - 66px);
+}
+
+.empty-cart {
+  background-color: white;
+}
+
+.amount {
+  color: #FE5F1E;
+}
+
+section.login {
+  background-color: #F8F8F8;
+  min-height: calc(100vh - 66px);
+}
+section.login a {
+  color: #FE5F1E;
+}
+section.login a:hover {
+  color: #b23301;
+}
+
+.login-form {
+  box-shadow: 10px 5px 5px rgb(153, 151, 151);
+  width: 22vw;
+  background-color: #fff;
+}
+
+.register-form {
+  box-shadow: 10px 5px 5px rgb(153, 151, 151);
+  width: 25vw;
+  background-color: #fff;
+}
+
+.reserve {
+  color: gray;
+}

@@ -16,5 +16,13 @@ nodemon
   "server":"node server.js",
     "dev":"nodemon server.js" 
     add these scripts
+4.git setup and first commit
+5.install laravel mix and 
+   setup js and scss
+6.install tailwind css /bootsrap
+7. craete home page using html ,css 
+create cart page-order summary section
+-empty cart sectionlogin and register
+
 Features:
 
