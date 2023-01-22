@@ -11,13 +11,12 @@ function initRoutes(app){
     // function(req,res){
     //     res.render('home')
     // }
-    app.get('/', homecontroller().index)
-    
-    app.get('/cart',cartController().index)
-    
+    app.get('/', homecontroller().index)         
     app.get('/login',authController().login)
-
     app.get('/register',authController().register)
+
+    app.get('/cart',cartController().index)
+    app.post('/update-cart',cartController().update)
     
 }
 

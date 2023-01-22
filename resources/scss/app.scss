@@ -1,4 +1,6 @@
 @import './variables';
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 // no need of extension and _bcz wo smjh jaaega partial file hai!!!!!!!!!!!!!!
 
 body{
@@ -72,6 +74,9 @@ nav li a{
         color:$pure;
         border-color: $pure;
     }
+    &:focus{
+      outline: none;
+    }
   }
 
 //   empty cart
@@ -114,6 +119,11 @@ section.cart{
     color:gray;
 
 
+}
+
+.noty_theme__mint{
+  border-radius: 50px!important ;
+  padding-left: 8px!important;
 }
 
 

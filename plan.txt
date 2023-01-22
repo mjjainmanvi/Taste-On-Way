@@ -23,6 +23,23 @@ nodemon
 7. craete home page using html ,css 
 create cart page-order summary section
 -empty cart sectionlogin and register
+8. move routes to routes files
+9.create dedicated controllers 
+10. add to cart funtionalities
+  fetch all dishes form db and show on home page
+  create menu model and put dummy data 
+  connect to mongodb
+  use connect-mongo for session store
+  dependencies
+  mongoose,express-session,connect-mongo,dotenv,expressflash
+  axios to send ajax requests
+  install notification library npm i noty 
+11.create login and resgister page
+12.build register crud
+
 
 Features:
+crud operation 
+stored cart in sessionss-use express-session
+session is middleware and for middleware we use app.use
 
