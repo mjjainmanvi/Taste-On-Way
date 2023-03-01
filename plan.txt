@@ -42,4 +42,14 @@ Features:
 crud operation 
 stored cart in sessionss-use express-session
 session is middleware and for middleware we use app.use
+agr all fiels not filled toh error aaegi and pr purane field ki value restore
+password is stored in hash form
 
+
+
+errors:
+jitnejo register page hai na usmei agr pehle all field required aajaye ar phir email already taken then login toh crash ho jaari
+await async meaning
+ajax call
+js function mei arrow key jo values milti hai wo aati ahi kay??????
+session store kaam nhi kr rha hai..in server.js

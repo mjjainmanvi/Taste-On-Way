@@ -3,13 +3,18 @@
 
     
     <div class="login-form  mx-auto  ">
-        <form action="" class=" p-3 ">
+        <form action="/login" method="POST" class=" p-3 ">
+            <% if(messages.error){%>
+                <div class="alert alert-danger" role="alert">
+                   <%= messages.error %>
+                  </div>
+                  <% } %>
             <label for="email" class="form-label">Email</label>
-  <input type="text" class="form-control" id="email" placeholder="Enter your email">
+  <input type="text" name="email" class="form-control" id="email" placeholder="Enter your email">
   <label for="password" class="form-label pt-2">Password</label>
-    <input type="password" class="form-control " id="password" placeholder="Enter your Password" >
+    <input type="password" name="password" class="form-control " id="password" placeholder="Enter your Password" >
     <button type="submit" class="btn btn-primary rounded-pill order-now mt-4 ">Log in</button>
-    <a href="" class="no-account float-end mt-4">Don't have account?</a>
+    <a href="/register" class="no-account float-end mt-4">Don't have account?</a>
         </form>
 
     </div>

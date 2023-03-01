@@ -12,10 +12,13 @@ const session=require('express-session')
 const flash=require('express-flash')
 const MongoDbStore = require('connect-mongo')
 const MongoStore = require('connect-mongo')
+const passport=require('passport')
+
 // yahan M capital as either it is a class or constructor function
 
 // database connection
 // const url=; 
+
 mongoose.connect('mongodb://localhost:27017/taste_on_way', { useNewUrlParser: true}).
 catch(error => handleError(error));
 const connection = mongoose.connection;
@@ -36,6 +39,8 @@ const connection = mongoose.connection;
 //     collection: 'sessions'
 // })  
 
+
+
   // session config
 
 app.use(session({
@@ -49,18 +54,25 @@ app.use(session({
   
 
 }))
+// passport config
+const passportInit=require('./app/config/passport.js')
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(flash())
 
 //assets
 app.use(express.static('public'))
+app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 // global middlewares
 
 app.use((req,res,next)=>{
-  res.locals.session = req.session;
-  next();
+  res.locals.session = req.session
+  res.locals.user=req.user
+  next()
 
 })
 

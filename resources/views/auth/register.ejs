@@ -3,15 +3,20 @@
 
     
     <div class="register-form mx-auto  ">
-        <form action="" class=" p-3 ">
+        <form action="/register" method="POST" class=" p-3 ">
+            <% if(messages.error){%>
+            <div class="alert alert-danger" role="alert">
+               <%= messages.error %>
+              </div>
+              <% } %>
             <label for="name" class="form-label pt-2">Name</label>
-  <input type="text" class="form-control " id="name" placeholder="Enter your name">
+  <input name="name" value="<%=messages.name %>" type="text" class="form-control " id="name" placeholder="Enter your name">
             <label for="email" class="form-label pt-2">Email</label>
-  <input type="text" class="form-control" id="email" placeholder="Enter your email">
+  <input type="text" value="<%=messages.email %>" name="email" class="form-control" id="email" placeholder="Enter your email">
   <label for="password" class="form-label pt-2">Password</label>
-    <input type="password" class="form-control " id="password" placeholder="Enter your Password" >
+    <input type="password" name="password" class="form-control " id="password" placeholder="Enter your Password" >
     <button type="submit" class="btn btn-primary rounded-pill order-now mt-4 ">Register</button>
-    <a href="" class="no-account float-end mt-4">Already have an account?</a>
+    <a href="/login" class="no-account float-end mt-4">Already have an account?</a>
         </form>
 
     </div>

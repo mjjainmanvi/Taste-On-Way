@@ -3,6 +3,9 @@ const homecontroller =require('../app/http/controllers/homecontroller')
 const cartController = require('../app/http/controllers/customers/cartController')
 
 // yshan hsame recieve ho rha jo humne rxport kra ha
+// middlewares
+const auth = require('../app/http/middlewares/auth')
+const guest = require('../app/http/middlewares/guest')
 
 function initRoutes(app){
    
@@ -12,8 +15,12 @@ function initRoutes(app){
     //     res.render('home')
     // }
     app.get('/', homecontroller().index)         
-    app.get('/login',authController().login)
-    app.get('/register',authController().register)
+    app.get('/login',guest,authController().login)
+    app.post('/login',authController().postLogin)
+    app.get('/register',guest,authController().register)
+    app.post('/register',authController().postRegister)
+    app.post('/logout',authController().logout)
+    
 
     app.get('/cart',cartController().index)
     app.post('/update-cart',cartController().update)
