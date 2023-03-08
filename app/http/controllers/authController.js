@@ -2,6 +2,9 @@ const User=require('../../models/user')
 const bcrypt=require('bcrypt')
 const passport = require('passport')
 function authController(){
+    const _getRedirectUrl = (req) => {
+        return req.user.role === 'admin' ? '/admin/orders' : '/customer/orders'
+    }
     // factory functions
         return {
             // index : function(){
@@ -33,7 +36,7 @@ function authController(){
                             req.flash('error',info.message)
                             return next(err)
                         }
-                        return res.redirect('/')
+                        return res.redirect(_getRedirectUrl(req))
                     })
                     
 
@@ -76,10 +79,11 @@ function authController(){
                 })
 
                 user.save().then((user)=>{
+                    // user lyu likha yahn pr??????????????????????????????
                     // login
 
-
-                    return res.redirect('/')
+                //    this.postLogin
+                    return res.redirect('/login')
                 }).catch(err =>{
                     req.flash('error','Something went wrong')
                     

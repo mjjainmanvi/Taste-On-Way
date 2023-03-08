@@ -62,6 +62,7 @@ app.use(passport.session())
 
 app.use(flash())
 
+
 //assets
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}))

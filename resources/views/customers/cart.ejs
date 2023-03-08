@@ -12,7 +12,7 @@
             </div>
             
                 <div class="order-list m-3">
-                    <%for(let dish of Object.values(session.cart.items) ){%>
+                    <% for(let dish of Object.values(session.cart.items) ){ %>
                        
                     <div class="d-flex m-1 p-2">
                         <img class="p-2" style="width:100px" src="img/<%= dish.item.image %>" alt="">
@@ -23,7 +23,7 @@
                         <span class="flex-grow-1 text-center p-2"><%= dish.qty %></span>
                         <span class="fw-bold align-middle p-2">₹<%= dish.item.price * dish.qty %></span>
                     </div>
-                  <%}  %>
+                  <% } %>
                 </div>
                 <hr>
                 <div class="text-end">
@@ -31,15 +31,32 @@
                         <span class="fw-bold fs-4">Total amount:</span>
                         <span class="ml-1 fw-bold fs-3 amount">₹<%= session.cart.totalPrice %></span>
                     </div>
-                    <form action="" class="mt-3">
+                    <% if(messages.error){%>
+                        <div class="alert alert-danger" role="alert">
+                           <%= messages.error %>
+                          </div>
+                          <% } %>
+                    <% if(user) {%>
+                    <form action="/orders" method="POST" class="mt-3">
                         <!-- ye right mei kyu nhi jaa rhe???? -->
-                        <input type="text" class="form-control w-50 m-2" placeholder="Phone Number">
-                        <input type="text" class="form-control w-50 m-2" placeholder="Address">
-                        <div>
-                        <button type="submit" class="btn btn-primary rounded-pill order-now">Order Now</button>
-                        </div>
+                        <input type="text" name="phone" class="form-control w-50 m-2" placeholder="Phone Number">
+                        <input type="text" name="address" class="form-control w-50 m-2" placeholder="Address">
+                      
+                            <div>
+                                <button type="submit" class="btn btn-primary rounded-pill order-now">Order Now</button>
+                            </div>
+
+                       
+
+ 
+
+
                     </form>
-                    <!-- <a href="" class="btn btn-primary rounded-pill order-now d-inline-block ">Login to continue</a> -->
+                    <%  } else {%>
+                    <a href="/login" class="btn btn-primary rounded-pill order-now d-inline-block ">Login to continue</a> 
+                    <% } %>
+
+
                 </div>
                 
         </div>

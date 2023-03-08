@@ -6,3 +6,5 @@ function auth(req, res, next) {
 }
 
 module.exports = auth
+
+// using this only login user hi jaa skte hai

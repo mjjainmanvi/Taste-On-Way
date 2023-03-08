@@ -36,6 +36,24 @@ create cart page-order summary section
   install notification library npm i noty 
 11.create login and resgister page
 12.build register crud
+ dependies expressflash express session dotenv
+13.build login using passport
+  dependencies passport passport-local express-session
+
+ Create Order controller and link it in server.js
+[+] Create Orders view with table for customer and admin
+[+] Place order functionality
+[+] Show all my orders on custormer orders page
+[+] Show orders on admin orders page
+
+
+[+] Change order status
+[+] Create Orders single page with status
+[+] Order tracker
+    [+] Socket connection
+        - dependancies socket.io
+[ ] Build project for deployment
+[ ] Deploy project on live server
 
 
 Features:
@@ -44,6 +62,8 @@ stored cart in sessionss-use express-session
 session is middleware and for middleware we use app.use
 agr all fiels not filled toh error aaegi and pr purane field ki value restore
 password is stored in hash form
+mpment is uesd for time formatting  
+admin middle ware noboy acn access admin 
 
 
 
@@ -53,3 +73,12 @@ await async meaning
 ajax call
 js function mei arrow key jo values milti hai wo aati ahi kay??????
 session store kaam nhi kr rha hai..in server.js
+
+app is getting crashed if without login we try to access customer/orders ......ideally it should redirect to login but app is getting crashed
+module.export dont work in admin.js in resources i ahve to use default export technique...dont know why?
+after register automatically login
+after login seedhe order wala page aa rha manage that
+
+axios function smjh nhi aaya like add to cart wala bhi ar admin orders wala bhi
+ek baar order palce kiya uske baad back kiya r pjir wapis order now kiy toh error
+Cannot read properties of undefined (reading 'items')

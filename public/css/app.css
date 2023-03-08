@@ -352,3 +352,8 @@ section.login a:hover {
   border-radius: 50px !important;
   padding-left: 8px !important;
 }
+
+table th td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
