@@ -1,5 +1,6 @@
 const Order=require('../../../models/order')
 const moment=require('moment')
+const order = require('../../../models/order')
 
 function orderController(){
      
@@ -43,6 +44,19 @@ return res.redirect('/cart')
         // isse back jaake wapis aane pe order placed sucesfully wlaa nhi aata?????????why ar iska kch bad code bhi tha ye shoet h
 res.render('customers/orders',{orders:orders , moment:moment})
         // console.log(orders)
+
+        },
+       async show(req,res){
+           const order=await  Order.findById(req.params.id)
+        //    Authorize id like agr id aapki nhi hai (order uss customer ka nhi hai toh usko nhi dikhana hai)
+        if(req.user._id.toString() === order.CustomerID.toString()){
+// here id will get in object format so stringify it
+res.render('customers/singleOrder',{order:order})
+// when key and pair value same then u can use it once like {order}
+        }
+        
+        return res.redirect('/')
+        
 
         }
     }
